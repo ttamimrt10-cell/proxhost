@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: tamim-file-host
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: YOUR_USERNAME
+        sync: false
+      - key: UPDATE_CHANNEL
+        sync: false
+      - key: BINANCE_API_KEY
+        sync: false
+      - key: BINANCE_SECRET_KEY
+        sync: false
+      - key: BINANCE_PAY_ID
+        sync: false
+      - key: POINTS_PER_REFERRAL
+        value: "200"
+      - key: KEEP_ALIVE_ENABLED
+        value: "true"
+      - key: KEEP_ALIVE_INITIAL_DELAY
+        value: "60"
+      - key: KEEP_ALIVE_INTERVAL
+        value: "600"
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: JSON_BACKUP_INTERVAL
+        value: "60"
