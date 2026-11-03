@@ -1,0 +1,40 @@
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+venv/
+env/
+.venv/
+
+# Runtime data (Render Free filesystem is ephemeral)
+inf/
+upload_bots/
+uploads/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+
+# Temporary / editor / OS files
+tmp/
+temp/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Automatically generated personal data snapshots (do not commit/share)
+config.json
+user.json
+config.json.tmp
+user.json.tmp
